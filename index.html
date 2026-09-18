@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krishna Namdev — Cloud Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="crt-overlay"></div>
+
+<div class="terminal-shell">
+
+  <!-- Top bar -->
+  <header class="titlebar">
+    <div class="dots"><span></span><span></span><span></span></div>
+    <div class="titlebar-text">krishna@cloud-portfolio: ~</div>
+    <div class="titlebar-clock" id="clock">--:--:--</div>
+  </header>
+
+  <div class="layout">
+
+    <!-- Sidebar nav styled as CLI commands -->
+    <nav class="sidenav" id="sidenav">
+      <div class="nav-label">$ ls sections/</div>
+      <a href="#about" class="nav-link active" data-target="about">./about</a>
+      <a href="#skills" class="nav-link" data-target="skills">./skills</a>
+      <a href="#certifications" class="nav-link" data-target="certifications">./certifications</a>
+      <a href="#education" class="nav-link" data-target="education">./education</a>
+      <a href="#projects" class="nav-link" data-target="projects">./projects</a>
+      <a href="#blog" class="nav-link" data-target="blog">./blog</a>
+      <a href="#contact" class="nav-link" data-target="contact">./contact</a>
+    </nav>
+
+    <main class="content">
+
+      <!-- HERO / BOOT SEQUENCE -->
+      <section class="hero" id="hero">
+        <pre class="boot-log" id="bootLog"></pre>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="pane" id="about">
+        <div class="pane-head"><span class="prompt">$</span> cat about.md</div>
+        <div class="pane-body">
+          <h1 class="name">Krishna Namdev</h1>
+          <p class="tagline">Aspiring Cloud Engineer — building on AWS, breaking things in Linux, and learning DevOps one deploy at a time.</p>
+          <p class="about-text">
+            I'm a fresher exploring the cloud engineering and DevOps world — comfortable across
+            the stack from front-end basics to Linux internals, and currently deepening my AWS
+            and automation skills.
+          </p>
+          <a class="resume-btn" href="resume.pdf" download>
+            <span class="resume-btn-icon">&darr;</span> Download Resume
+          </a>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="pane" id="skills">
+        <div class="pane-head"><span class="prompt">$</span> ./skills --list</div>
+        <div class="pane-body">
+          <div class="skills-grid" id="skillsGrid"></div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS -->
+      <section class="pane" id="certifications">
+        <div class="pane-head"><span class="prompt">$</span> ./certifications --status</div>
+        <div class="pane-body">
+          <ul class="cert-list" id="certList"></ul>
+          <!-- <p class="edit-hint">// edit these in <code>data.js</code> → <code>certifications</code></p>-->
+        </div> 
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="pane" id="education">
+        <div class="pane-head"><span class="prompt">$</span> cat education.log</div>
+        <div class="pane-body">
+          <ul class="edu-list" id="eduList"></ul>
+          <!-- <p class="edit-hint">// edit these in <code>data.js</code> → <code>education</code></p> -->
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="pane" id="projects">
+        <div class="pane-head"><span class="prompt">$</span> ./projects --list</div>
+        <div class="pane-body">
+          <div class="coming-soon">
+            <div class="cs-icon">[ ]</div>
+            <p class="cs-title">coming_soon.exe</p>
+            <p class="cs-sub">Projects are being built. Check back shortly.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOG -->
+      <section class="pane" id="blog">
+        <div class="pane-head"><span class="prompt">$</span> ./blog --recent</div>
+        <div class="pane-body">
+          <div class="coming-soon">
+            <div class="cs-icon">[ ]</div>
+            <p class="cs-title">coming_soon.exe</p>
+            <p class="cs-sub">First post is compiling. Check back shortly.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="pane" id="contact">
+        <div class="pane-head"><span class="prompt">$</span> ./contact --info</div>
+        <div class="pane-body">
+          <ul class="contact-list" id="contactList"></ul>
+          <!-- <p class="edit-hint">// edit these in <code>data.js</code> → <code>contact</code></p> -->
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>© <span id="year"></span> Krishna Namdev</span>
+        <span class="footer-blink">_</span>
+      </footer>
+
+    </main>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

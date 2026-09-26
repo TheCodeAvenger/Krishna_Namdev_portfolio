@@ -240,6 +240,37 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: -0.5px;
 }
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+.project-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  background: var(--bg-panel-2);
+}
+.project-card h3 {
+  font-family: var(--font-display);
+  color: var(--amber);
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+.project-desc {
+  color: var(--text-dim);
+  font-size: 13px;
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+.project-links { margin-top: 10px; display: flex; gap: 14px; }
+.project-links a {
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--amber-dim);
+}
+.project-links a:hover { color: var(--amber); }
+
 .tagline {
   color: var(--amber);
   font-size: 15px;
